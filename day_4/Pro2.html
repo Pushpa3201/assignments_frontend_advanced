@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h3>JavaScript Programming -- Array Of Objects - Dynamic DOM  </h3>
+		<hr/>
+		<form>
+		Emp No : <input type="text" id="t1" name="t1" autofocus /><br><br>
+        Emp Name : <input type="text" id="t2" name="t2" /><br><br>
+        Job : <input type="text" id="t3" name="t3" /><br><br>
+        Salary : <input type="text" id="t4" name="t4" /><br><br>
+		<input type="reset"   value="Add Rows"  onclick="fn_addRows()"  />
+        <input type="button"   value="Delete Rows"   onclick="fn_delRows()"  />
+    </form>
+	 
+		<br/><br/>
+		<table  id="table1"  border="2"  width="500"  cellpadding="10" cellspacing="0">
+			<tr>
+					<th>EmpNo</th>
+					<th>EName</th>
+					<th>Job</th>
+                    <th>Salary</th>
+			</tr>
+		</table>
+	 
+		
+		<script>	
+		
+	
+			  function fn_addRows()
+			  {		    
+                        var empnoObj = document.getElementById("t1").value;  
+                        var empnameObj = document.getElementById("t2").value;  
+                        var jobObj = document.getElementById("t3").value;  
+			  		    var salaryObj = document.getElementById("t4").value;  
+
+                        var obj = {empno:empnoObj, ename:empnameObj, Job:jobObj, salary:salaryObj};
+						var  tableObj =  document.getElementById("table1");	 
+					
+						
+							 		var  row1 =  tableObj.insertRow(-1);			
+						
+									var  cell1 =  row1.insertCell(-1);
+									var  cell2 =  row1.insertCell(-1);
+									var  cell3 =  row1.insertCell(-1);
+									var  cell4 =  row1.insertCell(-1);
+									
+									cell1.innerHTML = obj.empno;						
+									cell2.innerHTML = obj.ename;						
+									cell3.innerHTML = obj.Job;	 
+									cell4.innerHTML = obj.salary;	 
+				 
+			  }		 
+
+              function fn_delRows()
+
+			  {		var  tableObj =  document.getElementById("table1");
+			  		var len = tableObj.rows.length;
+			  
+						if(len>1){
+								 
+							 		tableObj.deleteRow(-1);
+						}
+				
+									
+			  }		 
+			 
+		</script>
+		
+	</body>
+</html>

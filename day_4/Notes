@@ -1,0 +1,10 @@
+How to add events to html elements at runtime  using javascript?
+
+
+
+How to use keypress, keyup, keydown events?
+
+=>The events related to keypresses are as follows :
+1)keydown: This event is triggered when a key is pressed down.
+2)keypress: This event is triggered when a key is pressed. This event fails to recognise keys such as tab, shift, ctrl, backspace etc.
+3)keyup: This event is triggered when a key is released.
