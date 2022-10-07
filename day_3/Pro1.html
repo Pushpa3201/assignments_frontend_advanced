@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h3>JavaScript Programming -- Forms </h3>
+		<hr/>
+		
+		 
+		<form  action="login.php"   method="get"   onsubmit="fn_submitData()">
+			
+				User Id  :  <input type="text"  id="uid" name="uid"  onblur="fn_cursorLeave()"   autofocus  />    
+				<span id="sp1" style="color:red;"></span><br/><br/>
+				Password  :  <input type="text"  id="pwd1" name="pwd1"  />      <br/><br/>
+				Retype Password  :  <input type="text"  id="pwd2" name="pwd2"  />      <br/><br/>
+		
+			  <input  type="submit"  value="Register"  />		
+		</form>
+		
+ 
+	 
+		
+		<script> 	 
+			  function fn_submitData()
+			  {
+					var password1  =  document.getElementById("pwd1").value;
+					var password2  =  document.getElementById("pwd2").value;
+					
+				// 	alert("Hello from Sumit data method");
+					
+					if(password1 ==  password2)
+					{
+						// allow to submit
+					}
+					else
+					{
+						// stop the submission
+						alert("Password and retype password should be same");
+						event.preventDefault();
+					}
+			  } 
+			  
+			  
+			 function  fn_cursorLeave()
+			 {
+					var userId  =  document.getElementById("uid").value;
+					
+					if(userId.trim() ==  "")
+					{
+							 //alert("User Id is required");
+							 document.getElementById("sp1").innerHTML =  "User id is required";
+							 document.getElementById("uid").focus();
+					}
+					else
+					{
+						document.getElementById("sp1").innerHTML =  "";
+					}
+				 
+			 }
+			  
+		</script>
+		
+	 
+		
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Working with JavaScript Forms</h1>
+        <form action="Login.php" method="get"   onsubmit="fn_submitData(event)">
+            Customer Name : <input type="text" id="t1" name="t1" onblur="fn_cursorLeave(event)"   autofocus />
+            <span id="sp1" style="color:red;"></span><br><br>
+            Enter Source  : <input type="text" id="t2" name="t2" /><br><br>
+            Enter Destination : <input type="text" id="t3" name="t3" /><br><br>
+            Contact Number : <input type="text" id="t4" name="t4" onblur="fn_cursorEnd(event)" pattern="\d{10}"  autofocus /><span id="sp2" style="color:red;"></span><br><br>
+            <input  type="submit"  value="Submit"  />
+        </form>
+
+        <script>
+            
+			  
+			  
+			 function  fn_cursorLeave(event)
+			 {
+                var Cname = document.getElementById("t1").value;
+					
+					if(Cname.trim() ==  "")
+					{
+							 
+							 document.getElementById("sp1").innerHTML =  "* Please enter your name";
+							 document.getElementById("t1").focus();
+							 event.preventDefault();
+					}
+					else
+					{
+						document.getElementById("sp1").innerHTML =  "";
+					}
+				 
+			 }
+
+             function  fn_cursorEnd(event)
+			 { 
+                var Cnumber = document.getElementById("t4").value;
+					
+					if(Cnumber.trim()=="")
+					{
+						document.getElementById("sp2").innerHTML =  "* Contact Number is required";
+						document.getElementById("t4").focus();
+						event.preventDefault();
+					}
+					else if(parseInt(Cnumber).length!=10)
+					{
+						
+                        document.getElementById("sp2").innerHTML =  "* Please enter correct number";
+						document.getElementById("t4").focus();
+						event.preventDefault();
+					}
+					else{
+						document.getElementById("sp1").innerHTML =  "";
+					}
+				 
+			 }
+
+			 function fn_submitData(event)
+			  {
+                var source = document.getElementById("t2").value;
+            var dest = document.getElementById("t3").value;
+					
+					if(source == dest)
+					{
+						//stop
+                        alert("Source and Destination should not be same");
+						event.preventDefault();
+					}
+					else
+					{
+						// allow the submission
+						
+					}
+			  } 
+            
+
+        </script>
+    </body>
+</html>
