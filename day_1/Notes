@@ -1,0 +1,50 @@
+What are the different activities that we do using javascript in client side programming?
+
+--> Adding interactive behavior to web pages.
+--> We can perform validations
+--> We can do Calculations.
+--> Develop gaming Applications.
+
+What is JavaScript engine for Safari?
+
+-->JavaScriptCore is Apple's engine for its Safari browser.
+JavaScriptCore is often referred with different names, such as ​SquirrelFish and ​SquirrelFish Extreme. Within the context of Safari, Nitro and Nitro Extreme are also commonly used. However, the name of the project and the library is always JavaScriptCore.
+
+Is it possible to disable JavaScript in browser? If yes, How to disable javascript in browser?
+-->Yes, it is possible to disbale Javascript in browser.
+Open Chrome DevTools. Press Control+Shift+P or Command+Shift+P (Mac) to open the Command Menu. Start typing javascript , select Disable JavaScript, and then press Enter to run the command. JavaScript is now disabled.
+
+What is the difference between undefined and not defined in JavaScript?
+-->Undefined is the result for the element that has been declared but not intialised to any value(Ex: var x;)
+-->Not defined is the outcome for the element that we are trying to access and that was actually not declared at all.
+
+What are the differences between Java and JavaScript?
+Java                                               
+-->It is a Programming language.
+-->Java is a pure Object Oriented Programming Language.
+-->Java is a strongly typed language, which means that the user has to decide the data type of the variable before declaring and using it.
+Example "int a", the variable "a" can store the value of integer type only.
+-->Java is a Standalone language.
+-->The web-browser is not required to run java programs.
+
+JavaScript
+-->It is a scripting language.
+-->JavaScript is Object-Based Language.
+-->JavaScript is a loosely typed language, which means that the user does not have to worry about the data-type of the variable before and after the declaration.
+Example "var a", the "a" variable can store the value of any data-type.
+-->JavaScript is not a standalone language, as it needs to be integrated into an HTML program for execution.
+-->The web-browser is essential to run the JavaScript programs.
+
+What are JavaScript Data Types?
+-->The set of types in the JavaScript language consists of primitive values and objects.
+
+**Primitive values (immutable datum represented directly at the lowest level of the language)
+    Boolean type
+    Null type
+    Undefined type
+    Number type
+    BigInt type
+    String type
+    Symbol type
+**Objects (collections of properties)
+
