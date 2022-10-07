@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Working with Loops in JavaScript</h1><hr/>
+        <input type="button" value="Get while Data" onclick="fn_whileloop()" />
+        <input type="button" value="Get doWhile Data" onclick="fn_doWhileloop()" />
+        <input type="button" value="Get for Data" onclick="fn_forloop()" />
+        <ul id="l1" style="border:2px solid blue; padding:20px"></ul>
+        <ul id="l2" style="border:2px solid blue; padding:20px"></ul>
+        <ul id="l3" style="border:2px solid blue; padding:20px"></ul>
+        
+        <script>
+            function fn_whileloop(){
+                var i=1;
+                var listObj = document.getElementById("l1");
+                var str = "";
+                while(i<5){
+                    str= str+"<li>Welcome to JavaScript - "+i+"</li>";
+                    i++;
+                }
+                listObj.innerHTML=str;
+            }
+            function fn_doWhileloop(){
+                var i=1;
+                var listObj = document.getElementById("l2");
+                var str = "";
+               do{
+                    str= str+"<li>Welcome to JavaScript - "+i+"</li>";
+                    i++;
+                } while(i<5)
+                listObj.innerHTML=str;
+            }
+            function fn_forloop(){
+                
+                var listObj = document.getElementById("l3");
+                var str = "";
+                for(var i=1; i<5; i++){
+                    str= str+"<li>Welcome to JavaScript - "+i+"</li>";
+                }
+                listObj.innerHTML=str;
+            }
+
+        </script>
+    </body>
+</html>

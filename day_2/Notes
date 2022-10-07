@@ -1,0 +1,24 @@
+What are the types of Pop up boxes available in JavaScript ?  Find some more details about pop-boxes? 
+-->Alert Box
+An alert box is often used if you want to make sure information comes through to the user.
+When an alert box pops up, the user will have to click "OK" to proceed.
+
+-->Confirm Box
+A confirm box is often used if you want the user to verify or accept something.
+When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed.
+If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
+
+-->Prompt Box
+A prompt box is often used if you want the user to input a value before entering a page.
+When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.
+If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
+
+
+What is BOM?    Diff... between DOM and BOM?
+BOM is the browser object model
+
+Provides objects that interact with the browser window independently of the content. It describes the methods and interfaces for interacting with the browser. It can access and operate the browser window, such as popup new window, change the text in the status bar, support for Cookie, IE also extends BOM, adds ActiveXObject class, and can instantiate ActiveX object through JS script, etc.
+
+DOM is the document object model
+
+DOM is a tree-based API for XML. Describes the methods and interfaces for handling web content. It is an API for HTML and XML. DOM plans the entire page into a document composed of nodes. DOM itself is a language-independent API, and it is not bound to Java, JavaScript, or any other language.

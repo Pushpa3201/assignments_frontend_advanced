@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Working with Loops in JavaScript</h1><hr/>
+        <input type="button" value="Get Data" onclick="fn_loop()" />
+        <ul id="l1" style="border:2px solid blue; padding:20px">
+        </ul>
+        <script>
+            function fn_loop(){
+                var i=1;
+                var listObj = document.getElementById("l1");
+                var str ="";
+                while(i<5){
+                    if(i%2!=0){
+                        str= str+'<li style="color:blue;" >Welcome to JavaScript - '+i+'</li>';
+                        
+                    }
+                    else{
+                        str= str+'<li style="color:green;">Welcome to JavaScript - '+i+'</li>'; 
+                    }
+                i++;
+                listObj.innerHTML=str;
+            }
+        }
+
+        </script>
+    </body>
+</html>
