@@ -1,0 +1,69 @@
+<html>
+<head>
+	<style>
+		div
+		{
+			border:2px solid Red;
+			color : Blue;
+			font-size: 30px;
+			height:  90px;
+			padding : 10px;
+		}
+	</style>
+</head>
+<body>
+<h3>Working with Objects in JS</h3>
+<hr/>
+<input type="button"   value="Object-1" onclick="f1()"  />
+<input type="button"   value="Object-2" onclick="f2()"  />
+<input type="button"   value="Object-3" onclick="f3()"  />
+<br></br>
+
+<div id="div1">	</div>
+
+<script> 
+ function   f1()
+ {		
+	var   s1  = {empno:1001, ename:"Ashish", job:"Engineer", sal:500000, deptno:21};  	 
+	
+	var  str  = `Empno  : ${s1.empno} ,   Emp Name  :  ${s1.ename}, Job : ${s1.job}, Salary : ${s1.sal}, Deptno : ${s1.deptno} `;
+	
+	var obj = document.getElementById("div1");
+	obj.innerHTML  = str;
+}	
+
+function   f2()
+ {		
+	var   s2  = {};  
+	s2.empno  = 2056;
+	s2.ename  = "Ravi";	
+    s2.job    = "Doctor"
+    s2.sal    = 100000;
+    s2.deptno = 22;
+	
+	var  str  = `Empno  : ${s2.empno} ,   Emp Name  :  ${s2.ename}, Job : ${s2.job}, Salary : ${s2.sal}, Deptno : ${s2.deptno} `;
+	var obj = document.getElementById("div1");
+	obj.innerHTML  = str;
+}	
+
+function  Student()
+{
+	this.empno  = 3021;
+	this.ename  = "Rajesh";	
+    this.job    = "Teacher"
+    this.sal    = 120000;
+    this.deptno = 23;
+}
+
+function   f3()
+ {		
+	var   s3  =  new Student();	 		
+	var  str  = `Empno  : ${s3.empno} ,   Emp Name  :  ${s3.ename}, Job : ${s3.job}, Salary : ${s3.sal}, Deptno : ${s3.deptno} `;
+	var obj = document.getElementById("div1");
+	obj.innerHTML  = str;
+}	
+ 
+ 
+</script>
+</body> 
+</html>
