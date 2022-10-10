@@ -36,7 +36,15 @@
 			  function fn_addRows()
 			  {		
 			  
-						var  tableObj =  document.getElementById("table1");	 
+						var  tableObj =  document.getElementById("table1");	
+						
+						var len = tableObj.rows.length;
+					
+						for(var i=0; i<len-1; i++){
+								
+									tableObj.deleteRow(-1);
+						}
+	  
 					
 						for(let  item  of  studentsArray)
 						{
@@ -56,13 +64,13 @@
               function fn_delRows()
 
 			  {		var  tableObj =  document.getElementById("table1");
-			  		var len = tableObj.rows.length;
-			  
-						for(var i=0; i<len-1; i++){
-								 
-							 		tableObj.deleteRow(-1);
-						}
-				
+					var len = tableObj.rows.length;
+					
+					for(var i=0; i<len-1; i++){
+							
+								tableObj.deleteRow(-1);
+					}
+	  
 									
 			  }		 
 			 
