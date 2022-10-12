@@ -1,0 +1,18 @@
+1. How to add / remove events dynamically without using event attributes (eg:  onclick, ...)?
+
+-->The addEventListener() method attaches an event handler to the specified element.
+-->you can add many event handlers to one element
+-->you can add many event handlers of the same type to one element, i.e two "click" events
+--> you can add event listeners to any DOM
+usage: refer sir examples.
+
+--> The removeEventListener() method removes event handlers to the specified elements.
+usage: refer sir examples.
+
+
+2. How to destructuring arrays in JavaScript?
+
+-->To destructure an array in Javascript, we use the square brackets[] to store the variable name which will be assigned to the name of the array storing the element.
+
+--> const [var1, var2, .....] = arrayName;
+

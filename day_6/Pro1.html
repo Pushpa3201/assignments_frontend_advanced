@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Data Filtration using JavaScript</h1>
+        <form>
+        Search : <input type="text" id="t1" name="t1" />
+        <input type="reset" value="Find by Empno" onclick="fn_findByEmpno()"/>
+        <input type="reset" value="Find by Job" onclick="fn_findByJob()"/>
+        </form>
+        <br/><br/>
+        <table  id="table1"  border="2"  width="500"  cellpadding="10" cellspacing="0">
+            <tr>
+                <th>Empno</th>
+                <th>Ename</th>
+                <th>Job</th>
+                <th>Salary</th>
+                <th>Deptno</th>
+            </tr>
+        </table>
+
+        <script>
+            var arr = [{empno:1001, ename:"Ashish", job:"Analyst", sal:500000, deptno:21},{empno:1002, ename:"Arun", job:"Manager", sal:500000, deptno:22},{empno:1003, ename:"Asha", job:"Developer", sal:500000, deptno:23},{empno:1004, ename:"Raj", job:"Consultant", sal:500000, deptno:24},{empno:1005, ename:"Ramya", job:"Manager", sal:500000, deptno:25}]
+
+            function fn_findByEmpno()
+			  {		    
+                        var eno = document.getElementById("t1").value;    
+						var  tableObj =  document.getElementById("table1");	
+
+                        var len = tableObj.rows.length;
+			  
+						for(let i =0; i<len-1; i++){
+							tableObj.deleteRow(-1);
+						}
+					
+						function findByEmpno(obj1){
+                            return (obj1.empno == eno);}
+                            
+
+                                var obj = arr.find(findByEmpno);
+                                var  row1 =  tableObj.insertRow(-1);			
+						
+									var  cell1 =  row1.insertCell(-1);
+									var  cell2 =  row1.insertCell(-1);
+									var  cell3 =  row1.insertCell(-1);
+									var  cell4 =  row1.insertCell(-1);
+									var  cell5 =  row1.insertCell(-1);
+									
+									cell1.innerHTML = obj.empno;						
+									cell2.innerHTML = obj.ename;						
+									cell3.innerHTML = obj.job;	 
+									cell4.innerHTML = obj.sal;	 
+									cell5.innerHTML = obj.deptno;	 
+                            console.log(obj);
+			  }
+
+              function fn_findByJob()
+			  {		    
+                        var eno = document.getElementById("t1").value;    
+						var  tableObj =  document.getElementById("table1");	
+                        var len = tableObj.rows.length;
+			  
+						for(let i =0; i<len-1; i++){
+							tableObj.deleteRow(-1);
+						}
+
+					
+						function findByJob(obj1){
+                            return (obj1.job == eno);}
+                            
+
+                                var obj = arr.filter(findByJob);
+
+                                for(let item of obj){
+                                var  row1 =  tableObj.insertRow(-1);			
+						
+									var  cell1 =  row1.insertCell(-1);
+									var  cell2 =  row1.insertCell(-1);
+									var  cell3 =  row1.insertCell(-1);
+									var  cell4 =  row1.insertCell(-1);
+									var  cell5 =  row1.insertCell(-1);
+									
+									cell1.innerHTML = item.empno;						
+									cell2.innerHTML = item.ename;						
+									cell3.innerHTML = item.job;	 
+									cell4.innerHTML = item.sal;	 
+									cell5.innerHTML = item.deptno;	 
+                            console.log(item);
+                            }
+			  }
+        </script>
+    </body>
+</html>
