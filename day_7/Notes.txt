@@ -1,0 +1,28 @@
+1. What is setInterval()  and setTimeout() methods in JavaScript?
+SetTimeout and SetInterval are the only native function in javaScript that is used to run code asynchronously , it means allow the function to executed immediately , there is no need to wait for current execution completion , it will for further to execute.
+
+=>setTimeout() method The setTimeout() method executes a function, after waiting a specified number of milliseconds. 
+
+Syntax:
+
+window.setTimeout(function, milliseconds);
+Parameter: There are two parameter that accepted by this method
+
+function : first parameter is a function to be executed
+milliseconds : indicates the number of milliseconds before execution takes place.
+
+=>setInterval() Method The setInterval() method repeats a given function at every given time-interval. 
+
+Syntax:
+
+window.setInterval(function, milliseconds);
+Parameter: There are two parameter that accepted by this method
+
+function : first parameter is the function to be executed
+milliseconds :indicates the length of the time-interval between each execution.
+
+
+2. Why do we use callbacks in JavaScript?
+
+Callbacks are a useful feature of JavaScript’s that enables it make asynchronous calls. They are functions that are usually passed on as a second parameter to another function that is fetching data or doing an I/O operation that takes time to complete. For example, try making an API call using the request module or connecting to a MongoDB database.
+

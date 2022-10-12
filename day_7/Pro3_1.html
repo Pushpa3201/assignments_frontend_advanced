@@ -1,0 +1,51 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1> JavaScript Promises</h1><hr>
+        <form>
+        Emp Id : <input type="text" id="t1" name="t1" />
+        <input type="reset" value="Get Data" onclick="fn_getData()"/>
+        </form>
+        <br/><br/>
+        <p id="p1"></p>
+
+        <script>
+           
+         async  function fn_getData(){
+                var n = document.getElementById("t1");
+                var paraObj = document.getElementById("p1");
+            
+            var url =  "https://dummy.restapiexample.com/api/v1/employee/" + n.value;
+
+            async function  getData()
+			{ 
+            
+                if(n.value<5 && n.value>0) 
+                    return Promise.resolve(await fetch(url));	
+                else 
+                    return Promise.reject("Error in fetching");
+
+			}
+
+                            
+
+                 try 
+				 {  
+                    var response = await getData();
+					var s1 =  await  response.json();  
+                        
+                    paraObj.innerHTML=`Emp id : ${s1.data.id} <br>   Emp Name :  ${s1.data.employee_name} <br>  Emp Salary : ${s1.data.employee_salary} <br> Emp age : ${s1.data.employee_age} <br> profile image : ${s1.data.profile_image}`;
+                    console.log(s1.data);
+				 }
+				 catch(error)
+				 {
+					paraObj.innerHTML=error;
+				 }				
+
+                
+           }	 
+		
+	</script>
+    </body>
+</html>

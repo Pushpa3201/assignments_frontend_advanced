@@ -1,0 +1,56 @@
+<html>
+	<head></head>
+	<body>
+		<h3>JavaScript Programming -- Timer Programming </h3>
+		<hr/>
+		
+		<button type="button"><img src="https://th.bing.com/th/id/R.b3fd22289a0e6fb41deed685dcf9d596?rik=nMlGo7%2fGERVqng&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_529968.png&ehk=FTbueyogeOoGR2qL2o5rzIBWMq9CE7kdAtTAPA8jdt8%3d&risl=&pid=ImgRaw&r=0" width="20px" onclick="fn_start()"/></button>
+        <button type="button"><img src="https://th.bing.com/th/id/R.5b3c064a93ebd2df6c9ee24ae4939dc5?rik=gK64WbF1AtHsBA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_78429.png&ehk=I%2fGpGF3KWO5mVaQ6R8qEN8%2bTQgXkfGN0BB6Ps%2fL%2fbgE%3d&risl=&pid=ImgRaw&r=0" width="20px" onclick="fn_stop()"/></button>
+
+	 
+		<hr/>
+		<!-- <h1  id="head1">Image1.jpg</h1> -->
+		<img   src="Images/image1.jpg"  id="img1"  border="2"  width="100%"  height="500"  />
+		 
+		
+		<script>	
+				var count = 0;   // global variable
+				var imagesArray =  ["image1.jpg", "image2.jpg", "image3.jpg","image4.jpg","image5.jpg", "image6.jpg", "image7.jpg", "image8.jpg"];
+				
+				
+				function   fn_start()
+				{
+					window.myInterval = setInterval( fn_nextItem,  1000);
+				}
+				
+				
+				function  showData()
+				{
+					//	var  headObj  =  document.getElementById("head1");			
+						var  imgObj  =  document.getElementById("img1");			
+					//	headObj.innerHTML = 	"Images/" +  imagesArray[count];
+						imgObj.src = 	"Images/" +  imagesArray[count];
+				}
+				
+			function    fn_nextItem()
+		   {					 
+					count++;			
+					
+					if(  count  > imagesArray.length-1)
+					{
+							count = 0;
+					}
+					
+					showData();
+			}
+			function fn_stop(){
+                clearInterval(myInterval);
+            }
+	 
+			
+		</script>
+		
+	 
+		
+	</body>
+</html>
