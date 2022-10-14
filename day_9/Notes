@@ -1,0 +1,15 @@
+ How to use next() and prev() methods in jquery?
+ The next() method returns the next sibling element of the selected element.
+Sibling elements are elements that share the same parent.
+The DOM tree: This method traverse forward along the next sibling of DOM elements.
+Related methods:
+nextAll() - returns all next sibling elements of the selected element
+nextUntil() - returns all next sibling elements between two given arguments
+
+
+The prev() method returns the previous sibling element of the selected element.
+Sibling elements are elements that share the same parent.
+The DOM tree: This method traverse backwards along the previous sibling of DOM elements.
+Related methods:
+prevAll() - returns all previous sibling elements of the selected element
+prevUntil() - returns all previous sibling elements between two given arguments

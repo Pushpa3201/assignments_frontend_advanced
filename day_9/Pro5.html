@@ -1,0 +1,68 @@
+<html>
+<head>
+    <style>
+        div{
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 200px;
+            height: auto;
+            float: left;
+            text-align: center;
+            padding-top: 10px;
+            margin: 10px;
+        }
+        img{
+            border-radius: 100%;
+            text-align: center;
+        }
+        h3{
+            color:red;
+            text-decoration: underline;
+            text-align: center;
+        }
+        p{
+            color: blue;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body id="body">
+<h1> Programming in  jQuery</h1>
+	<hr/> 
+    <input type="button" value="Show Data" id="b1" /> <br><br>
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	<script>
+	
+		$(document).ready(function()
+		{
+            $("#b1").click(function(){
+                $.ajax({
+                     url :  "https://reqres.in/api/users",
+                     type: "GET",
+                     success :  function(response)
+									{
+										
+										//  alert(resData.records);
+										displayData(response.data);
+									}
+									
+                });
+            });
+
+         });
+         
+         function displayData(resData){
+            console.log(resData);
+            for(let i=0; i<resData.length; i++){
+            var s = "<div><img src="+resData[i].avatar+"><h3>"+resData[i].first_name+resData[i].last_name+"</h3><p>"+resData[i].email+"</p>";
+            $("#body").append(s);
+            }
+         }
+			 
+		
+	</script>	 
+</body>
+</html>

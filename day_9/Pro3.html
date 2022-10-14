@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image gallery using jQuery effects</title>
+        <style>
+            img{
+                border-radius: 100%;
+                height: 250px;
+                width:250px;
+            }
+            td{
+                height: 300px;
+                width:300px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Image Gallery</h1><hr>
+        <table id="table1">
+            <tr>
+                <td><img src="Images/image1.jpg" alt="" class="c1" /></td>
+                <td><img src="Images/image2.jpg" alt="" class="c2"></td>
+                <td><img src="Images/image3.jpg" alt="" class="c1"></td>
+                <td><img src="Images/image4.jpg" alt="" class="c2"></td>
+            </tr>
+            <tr>
+                <td><img src="Images/image5.jpg" alt="" class="c2"></td>
+                <td><img src="Images/image6.jpg" alt="" class="c1"></td>
+                <td><img src="Images/image7.jpg" alt="" class="c2"></td>
+                <td><img src="Images/image8.jpg" alt="" class="c1"></td>
+            </tr>
+            <tr>
+                <td><img src="Images/image9.jpg" alt="" class="c1"></td>
+                <td><img src="Images/image10.jpg" alt="" class="c2"></td>
+                <td><img src="Images/image11jpg.jpg" alt="" class="c1"></td>
+                <td><img src="Images/image12.jpg" alt="" class="c2"></td>
+            </tr>
+            <tr>
+                <td><img src="Images/image13.jpg" alt="" class="c2"></td>
+                <td><img src="Images/image14.jpg" alt="" class="c1"></td>
+                <td><img src="Images/image15.jpg" alt="" class="c2"></td>
+                <td><img src="Images/image16.jpg" alt="" class="c1"></td>
+            </tr>
+        </table>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $(".c1").hide();
+              setInterval(function(){
+                $(".c1").toggle(2000);
+                $(".c2").toggle(2000);
+              }, 2000);
+            });
+        </script>
+    </body>
+</html>
