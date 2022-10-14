@@ -1,0 +1,62 @@
+<!-- Create HTML page to implement Sum operation by using jQuery -->
+<html>
+ <head>
+    <style>
+        p{
+            color: blueviolet;
+            font-weight: bold;
+        }
+    </style>
+ </head>
+
+ <body>
+<h3>jQuery Programming - 1</h3>
+	<hr />	
+    Product :
+    <select id="s1" onchange="fn_change()">
+        <option value="">Select</option>
+        <option value="1000">Table</option>
+        <option value="500">Chair</option>
+        <option value="2000">Fan</option>
+        <option value="300">Light</option>
+        <option value="10000">Matress</option>
+        <option value="20000">Sofa</option>
+        <option value="30000">TV</option>
+        <option value="">Other</option>
+    </select><br><br>
+    Unit Price : 
+    <input type="text" name="select2" id="t1" value="" />
+    <br><br><hr><br>
+	Total Items :
+	<input type="text" name="text2" id="t2" />
+	<br><br>		
+	<input type="button"  onclick="fn_amountButton()"  name="b1" id="b1"  value="Get Total" />
+	<p id="p1" ></p>
+	
+	
+	
+	<script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	
+	<script>
+        
+
+        function fn_change(){
+           var s = $("#s1").val();
+           $("#t1").val(s);
+           
+        }
+
+		function   fn_amountButton()
+		{
+				let  x  = 	$("#t1").val();
+				let  y  = 	$("#t2").val();
+				let  z  =    (x * y);		
+
+			$("#p1").html("Total Amount  : "  +  z);
+		}
+	 
+				
+	</script>
+	
+ </body>
+</html>

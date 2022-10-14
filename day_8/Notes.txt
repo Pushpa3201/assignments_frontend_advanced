@@ -1,0 +1,55 @@
+1. What are different types of selectors in CSS?
+
+We can divide CSS selectors into five categories:
+
+Simple selectors (select elements based on name, id, class)
+Combinator selectors (select elements based on a specific relationship between them)
+Pseudo-class selectors (select elements based on a certain state)
+Pseudo-elements selectors (select and style a part of an element)
+Attribute selectors (select elements based on an attribute or attribute value).
+
+2. Find some details about CDN:
+
+A content delivery network (CDN) refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content.
+
+A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages, javascript files, stylesheets, images, and videos. The popularity of CDN services continues to grow, and today the majority of web traffic is served through CDNs, including traffic from major sites like Facebook, Netflix, and Amazon.
+
+A properly configured CDN may also help protect websites against some common malicious attacks, such as Distributed Denial of Service (DDOS) attacks.
+
+What are the benefits of using a CDN?
+Although the benefits of using a CDN vary depending on the size and needs of an Internet property, the primary benefits for most users can be broken down into 4 different components:
+
+Improving website load times - By distributing content closer to website visitors by using a nearby CDN server (among other optimizations), visitors experience faster page loading times. As visitors are more inclined to click away from a slow-loading site, a CDN can reduce bounce rates and increase the amount of time that people spend on the site. In other words, a faster a website means more visitors will stay and stick around longer.
+
+Reducing bandwidth costs - Bandwidth consumption costs for website hosting is a primary expense for websites. Through caching and other optimizations, CDNs are able to reduce the amount of data an origin server must provide, thus reducing hosting costs for website owners.
+
+Increasing content availability and redundancy - Large amounts of traffic or hardware failures can interrupt normal website function. Thanks to their distributed nature, a CDN can handle more traffic and withstand hardware failure better than many origin servers.
+
+Improving website security - A CDN may improve security by providing DDoS mitigation, improvements to security certificates, and other optimizations.
+
+How does a CDN work?
+At its core, a CDN is a network of servers linked together with the goal of delivering content as quickly, cheaply, reliably, and securely as possible. In order to improve speed and connectivity, a CDN will place servers at the exchange points between different networks.
+
+These Internet exchange points (IXPs) are the primary locations where different Internet providers connect in order to provide each other access to traffic originating on their different networks. By having a connection to these high speed and highly interconnected locations, a CDN provider is able to reduce costs and transit times in high speed data delivery.
+
+3. What is the difference between   "this" and  $(this) in jquery programming?
+
+                                                             
+this                                                  $(this)       
+
+It refers to DOM elements	                           It also refers to DOM elements.
+this is used in a native way.	                       this is put in $(), it becomes a jQuery object.
+We can call all DOM methods on                         We can call all jQuery methods and functions 
+it but not jQuery methods.                             on it but not DOM methods.
+	            
+this has only generic JavaScript functionality.	       By using $(this), you enabled jQuery functionality for object
+
+4.Why do we use $(document).ready()  in jQuery?
+The ready() method is used to make a function available after the document is loaded. Whatever code you write inside the $(document ).ready() method will run once the page DOM is ready to execute JavaScript code.
+
+5.How to attach one time events in jQuery?
+
+6.How to select all textboxes using jQuery selector?
+The select() event is applied to an element using jQuery when the user makes a text selection inside an element or on focus the element. This event is limited to some fields.
+Syntax:
+$("selected element").select();

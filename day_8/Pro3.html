@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<style>
+			.c1
+			{
+				border:1px solid gray;
+				height :  80px;
+				width :  70px;
+				border-radius : 5px;
+				padding : 5px;
+				margin : 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>jQuery Programming -- Event Handling (Using Event Object) </h3>
+		<hr/>
+		
+		
+		<br/><br/>
+		<img class="c1" src="Images/image1.jpg"  id="img1"    />
+		<img class="c1" src="Images/image2.jpg"  id="img2"    />
+		<img class="c1" src="Images/image3.jpg"  id="img3"    />
+		<img class="c1" src="Images/image4.jpg"  id="img4"    />
+		<hr/>
+		<img   src="Images/image1.jpg"  id="bigImg"  border="2"  width="340"  height="340"  />
+		
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+		
+		<script>		
+			$(document).ready(function(){
+                $(".c1").hover(function(){
+                    
+                    $("#bigImg").attr("src", $(this).attr("src"));
+                })
+            })
+			 
+		</script>
+		
+	 
+		
+	</body>
+</html>

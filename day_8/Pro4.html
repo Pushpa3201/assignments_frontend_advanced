@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    </head>
+    <body style="background-color: lightgrey; text-align: center;">
+        <h3>jQuery Calculator Example</h3>
+        <input type="text" class="txt" id="t1" /><br><br>
+        <input type="button" class="btns btn text-bg-dark" id="b1" value="1" />
+        <input type="button" class="btns btn text-bg-dark" id="b2" value="2" />
+        <input type="button" class="btns btn text-bg-dark" id="b3" value="3" />
+        <input type="button" class="btns btn text-bg-dark" id="b0" value="0" /><br><br>
+        <input type="button" class="btns btn text-bg-dark" id="b4" value="4" />
+        <input type="button" class="btns btn text-bg-dark" id="b5" value="5" />
+        <input type="button" class="btns btn text-bg-dark" id="b6" value="6" />
+        <input type="button" class="b btn text-bg-secondary" id="bcl" value="cl" /><br><br>
+        <input type="button" class="btns btn text-bg-dark" id="b7" value="7" />
+        <input type="button" class="btns btn text-bg-dark" id="b8" value="8" />
+        <input type="button" class="btns btn text-bg-dark" id="b9" value="9" />
+        <input type="button" class="bt btn text-bg-secondary" id="b=" value="=" /><br><br>
+        <input type="button" class="btns btn text-bg-secondary" id="b+" value="+" />
+        <input type="button" class="btns btn text-bg-secondary" id="b-" value="-" />
+        <input type="button" class="btns btn text-bg-secondary" id="b*" value="*" />
+        <input type="button" class="btns btn text-bg-secondary" id="b/" value="/" />
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+           $(document).ready(function(){
+            var s="";
+            
+            $(".btns").click(function(){
+                s=s+$(this).val();
+                $("#t1").val(s);
+            })
+
+            $(".bt").click(function(){
+                var a = eval(s);
+                $("#t1").val(a);
+                s="";
+
+            })
+
+            $(".b").click(function(){
+                var s ="";
+                $("#t1").val(s);
+            })
+           })
+        </script>
+    </body>
+</html>
