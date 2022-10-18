@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Program2</title>
+    </head>
+    <body>
+        <h1>jQuery-String Methods</h1><hr>
+        <input type="button" id="btn" value="Get Data" /><br><br>
+        <table id="table" border="2" cellspacing="0" cellpadding="5">
+            <tr><th>Card Number</th></tr>
+            <tr><th>Holder Name</th></tr>
+            <tr><th>Card Type</th></tr>
+            <tr><th>Expiry Date</th></tr>
+        </table>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            var Obj = {cardNumber : 1234456778997896, chName : "pusHpa jonnalagadda", cardType : "Visa", expireMonth : 14, expireYear : 2023};
+             
+            var str1 = String(Obj.cardNumber);
+            var str1 = str1.replace(str1.slice(0,12), "****_****_****_");
+             console.log(str1);
+             var s = Obj.chName;
+            $.fn.holderName = function(s){
+                var arr = s.split(" ");
+                var str2 ="";
+                for(let i of arr){
+                   var st = i.charAt(0).toUpperCase();
+                   var lt = i.substring(1).toLowerCase();
+                   str2 += st+lt+ " ";
+                }
+               // alert(arr);
+                return str2;
+            }
+            //console.log($.fn.holderName(s));
+           var str3 = Obj.cardType.toUpperCase();
+
+           var newDate = new Date( Obj.expireYear, Obj.expireMonth);
+
+           const nameOfMonth = newDate.toLocaleString('default', {month: 'short',});
+           var str4 = nameOfMonth + " " + Obj.expireYear;
+
+            $("#btn").click(function(){
+                $("#table tr").eq(0).append(`<td>${str1}</td>`);
+                $("#table tr").eq(1).append(`<td>${$.fn.holderName(s)}</td>`);
+                $("#table tr").eq(2).append(`<td>${str3}</td>`);
+                $("#table tr").eq(3).append(`<td>${str4}</td>`);
+            });
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jquery1</title>
+    </head>
+    <body>
+        <h1>jQuery-Regex</h1>
+        <hr>
+        Enter Name  :  <input type="text"  id="t1" />  
+	<br/><br/>
+	Contact Number  :  <input type="text"  id="t2" />  
+	<br/><br/>
+    Vehicle Number :  <input type="text"  id="t3" />  
+	<br/><br/>
+    City Name :  <input type="text"  id="t4" />  
+	<br/><br/>
+	
+  
+	
+	<script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	
+	<script>
+$(document).ready(function(){ 
+	
+			 $('#t1').keyup(function() {
+			 
+						$(".error-t1").remove();						
+						var inputVal = $(this).val();						
+						var numericReg = /^([ \u00c0-\u01ffa-zA-Z'\-]{1,10})$/;
+							
+			//				alert(  numericReg.test( inputVal )  );
+			//  			test()  method returns true or false
+				 			
+							if(  numericReg.test(inputVal)  ==  false && inputVal.length>0) 
+							{
+								$(this).after('<span style="color:red" class="error-t1">Please enter valid name.</span>');
+							}
+						 
+			});
+			
+			
+		 $('#t2').keyup(function() {
+			 
+						$(".error-t2").remove();						
+						var inputVal = $(this).val();						
+						var NumReg = /^([0-9]{1,10})?$/;
+						 		
+							if(  NumReg.test(inputVal)  ==  false && inputVal.length>0) 
+							{
+								$(this).after('<span style="color:red" class="error-t2">Enter Valid Number</span>');
+							}
+						 
+			});
+
+            $('#t3').keyup(function() {
+			 
+             $(".error-t3").remove();						
+             var inputVal = $(this).val();						
+             var NumReg = /^([A-Z]{2}\d{2}[A-Z]{2}\d{4}){1,10}?$/;
+                      
+                 if(  NumReg.test(inputVal)  ==  false && inputVal.length>0) 
+                 {
+                     $(this).after('<span style="color:red" class="error-t3">Enter Valid Number</span>');
+                 }
+              
+ });
+ $('#t4').keyup(function() {
+			 
+             $(".error-t4").remove();						
+             var inputVal = $(this).val();						
+             var NumReg = /^([A-Z ])+$/;
+                      
+                 if(  NumReg.test(inputVal)  ==  false && inputVal.length>0) 
+                 {
+                     $(this).after('<span style="color:red" class="error-t4">Enter Valid City</span>');
+                 }
+              
+ });
+			
+});
+</script>
+    </body>
+</html>
