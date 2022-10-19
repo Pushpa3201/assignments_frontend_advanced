@@ -1,0 +1,14 @@
+{
+  "name": "myfirstnode",
+  "version": "1.0.0",
+  "description": "My Node Unique Id Generation Application",
+  "main": "Node1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pushpa",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^9.0.0"
+  }
+}
