@@ -1,0 +1,9 @@
+div{
+    border:2px;
+    background-color: blue;
+    text-align: center;
+}
+
+label, p, h3{
+    color:white;
+}

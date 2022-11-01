@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<p class="p1"></p>
+<div class="div1"><hr>
+<h3>Working with directives in Angulars</h3>
+<hr/>
+
+Select Display Mode : <br><br>
+<i class="bi bi-list-ol" (click)="viewList()" ></i>
+<i class="bi bi-table" (click)="viewTable()" ></i>
+<i class="bi bi-card-text" (click)="viewCard()"></i>
+<br><br>
+
+<input type="radio" value="List" name="rd" [(ngModel)]="mode" /><label> List</label>
+<input type="radio" value="Table" name="rd" [(ngModel)]="mode" /><label> Table</label>
+<input type="radio" value="Card" name="rd" [(ngModel)]="mode" /><label> Card</label>
+
+<br/><br/>
+<section [ngSwitch]="mode">
+    <article *ngSwitchCase="'List'">
+        <ol>
+            <li *ngFor="let item of studentsArray">
+                Mr./Mrs. 
+                <span style="color:blue; font-weight: bold;">{{item.sname}}</span> 
+                joined in 
+            <span   [ngStyle]="{ color : (item.course == 'Angular')?'red':'green' }">{{item.course}} </span> 
+                course.
+            </li>
+        </ol>        
+    </article>
+
+    <article *ngSwitchCase=" 'Table' ">
+        <table border="2" cellspacing="0" cellpadding="5" width="500">
+            <tr class="bg1">
+              <th>S.No</th>
+              <th>Student Name</th>
+              <th>Course Name</th>
+            </tr>
+        
+            <tr *ngFor="let item of studentsArray;  let i = index; let x = even; let y = odd;"
+                [ngClass]="{'bg2':x, 'bg3':y}">
+              <td> {{i + 1}}</td>
+              <td>{{item.sname}}</td>
+              <td>{{item.course}}</td>
+            </tr>
+        
+          </table>
+    </article>
+
+    <article *ngSwitchCase=" 'Card' ">
+        <div *ngFor="let item of studentsArray" class="c1">
+            <p class="c2">{{item.sname}}</p>
+            {{item.course}}
+        </div>
+    </article>
+</section>
+
+<div *ngIf="studentsArray.length == 0">
+    **Students details are not available at this movement. 
+</div>
+</div>

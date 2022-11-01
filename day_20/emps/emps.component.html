@@ -1,0 +1,50 @@
+
+    <style>
+        th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+  <!--- <table cellspacing="0" cellpadding="5" width="500">
+    <tr><th colspan="2">Employee Details</th></tr>
+    <tr>
+        <td>Employee ID</td>
+        <td>{{empid}}</td>
+    </tr>
+    <tr>
+        <td>Employee Name</td>
+        <td>{{empname}}</td>
+    </tr>
+    <tr>
+        <td>Employee Job</td>
+        <td>{{job}}</td>
+    </tr>
+    <tr>
+        <td>Employee Salary</td>
+        <td>{{salary}}</td>
+    </tr>
+    <tr>
+        <td>Employee Depo</td>
+        <td>{{dept}}</td>
+    </tr>
+   </table><br><hr><br>-->
+
+   <table cellspacing="0" cellpadding="5" width="500">
+    <tr><th>Employee Name</th>
+        <th>Performance Grades</th></tr>
+    
+        <tr *ngFor="let item of employees">
+            <td>{{item.empname}}</td>
+            <td>{{item.grade}}</td>
+        </tr>
+   </table>
+   <hr/>
+   <table cellspacing="0" cellpadding="5" width="500">
+    <tr><th>Employee Name</th>
+        <th>Performance Grades</th></tr>
+    
+        <tr *ngFor="let item of employees">
+            <td>{{item.empname | uppercase }}</td>
+            <td>{{item.grade | gradepipe | titlecase}}</td>
+        </tr>
+   </table>

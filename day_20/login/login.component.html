@@ -1,0 +1,12 @@
+<h3>Data Binding in Angular</h3>
+<hr/>
+<fieldset>
+<legend>User Login</legend>
+
+User Id  :  <input  [(ngModel)]="uid"   />  
+<br/><br/>
+Password :  <input type="password" [(ngModel)]="pwd"   />  
+<br/><br/>
+<input type="button"  value="Login" (click)="isValidUser()" />  
+
+</fieldset>

@@ -1,0 +1,35 @@
+.p1{
+  clear: left;
+}
+
+.div1{
+  margin-top: 20px;
+  position:relative;
+}
+
+.bg1{ background-color :  lightblue;  }
+    .bg2{ background-color :  lightgreen;  }
+    .bg3{ background-color :  pink;  }
+
+.c1
+  {
+    color : dodgerblue;
+    border:1px solid dodgerblue;
+    width :  100px;
+    margin : 5px;
+    float : left;
+    text-align : center;
+    background-color : white;
+  }
+
+  .c2
+  {
+     background-color: dodgerblue;
+     color : white;
+     margin: 0px;
+  }
+  i{
+    width: 50px;
+    margin:5px;
+
+  }
