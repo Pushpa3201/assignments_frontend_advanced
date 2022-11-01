@@ -1,0 +1,64 @@
+pupushpalatha@USHYDPUPUSHPAL6 MINGW64 /c/MyGitRepo1 (master)
+$ cd c:
+
+pupushpalatha@USHYDPUPUSHPAL6 MINGW64 /c
+$ cd DemoExp
+
+pupushpalatha@USHYDPUPUSHPAL6 MINGW64 /c/DemoExp
+$ git init
+Initialized empty Git repository in C:/DemoExp/.git/
+
+pupushpalatha@USHYDPUPUSHPAL6 MINGW64 /c/DemoExp (master)
+$ git remote add origin "https://github.com/tnrao-trainer/TestRepo2010.git"
+
+pupushpalatha@USHYDPUPUSHPAL6 MINGW64 /c/DemoExp (master)
+$ git pull origin master
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 10 (delta 2), reused 8 (delta 1), pack-reused 0
+Unpacking objects: 100% (10/10), 1.43 KiB | 18.00 KiB/s, done.
+From https://github.com/tnrao-trainer/TestRepo2010
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+pupushpalatha@USHYDPUPUSHPAL6 MINGW64 /c/DemoExp (master)
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+pupushpalatha@USHYDPUPUSHPAL6 MINGW64 /c/DemoExp (dev)
+$ touch pushpa.txt
+
+pupushpalatha@USHYDPUPUSHPAL6 MINGW64 /c/DemoExp (dev)
+$ git add pushpa.txt
+
+pupushpalatha@USHYDPUPUSHPAL6 MINGW64 /c/DemoExp (dev)
+$ git commit -m "pushpa.txt is added to dev at 5:43 pm"
+[dev debf1af] pushpa.txt is added to dev at 5:43 pm
+ Committer: Pushpa Latha <pupushpalatha@deloitte.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 pushpa.txt
+
+pupushpalatha@USHYDPUPUSHPAL6 MINGW64 /c/DemoExp (dev)
+$ git push origin dev
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 258 bytes | 258.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/tnrao-trainer/TestRepo2010.git
+   3e74fcf..debf1af  dev -> dev

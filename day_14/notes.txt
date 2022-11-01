@@ -1,0 +1,47 @@
+Git account ---> https://github.com/
+Git Install ---> https://git-scm.com/download/win
+
+---> cd  /
+cd c:
+cd MyGitRepo/
+dir
+git init
+git status
+touch Demo1.html
+git add Demo1.html
+git Commit -m "New File is added "
+git log
+
+---> touch emp.component.ts,emp.component.html, emp.component.css
+git add -A
+git commint -m "Assignments added"
+
+--->created a test repo in git hub
+dir
+git remote add origin "https://github.com/sravz2000/TestRepo2010"
+git push origin master
+git remote -v
+
+--->cd /
+cd c:
+cd MyGitRepo1
+git init
+git pull origin master
+git add -A
+git Commit -m "Task 3 done"
+git push origin master
+
+--->git checkout -b test
+touch test1.html,test1.css,test2.ts
+git add -A
+git push origin test
+git checkout master
+git merge test
+git push origin master
+
+
+-->settings-->collborataors--send request--->add rules from branch
+-->approve the pushed changes and merge.
+
+Props in react (props  == properties) : argument passed into react components , passed via HTML Elements
+-> they are function argument in js & attributes in html.
