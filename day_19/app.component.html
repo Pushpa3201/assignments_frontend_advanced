@@ -1,0 +1,38 @@
+<!---<h1>Application Development using Angular</h1><hr/>
+<input type="button" value="Get data" (click)="btn1()" />
+
+<table>
+    <tr><th>Employee Name</th>
+    <th>Grade</th></tr>
+    <tr *ngFor="let item of empObj">
+        <td>{{item.empname}}</td>
+        <td>{{item.grade}}</td>
+    </tr>
+</table>
+<app-emps></app-emps>
+<app-login></app-login>
+<app-demo></app-demo>
+<app-depts></app-depts>
+<app-products></app-products><hr>
+<app-students-list></app-students-list>
+<app-user-component></app-user-component>
+<app-details></app-details>-->
+
+
+<h3>Single Page Application in Angular</h3>
+<hr/>
+<div style="text-align: left;">
+    <a [routerLink]=" ['/Login'] " >Login</a>  |
+    <a [routerLink]=" ['/Logout'] " >Logout</a>  
+</div>
+<div style="text-align: center;">
+<a [routerLink]=" ['/'] " >Home</a>  |
+<a [routerLink]=" ['/Depts'] " >Departments</a>  |
+<a [routerLink]=" ['/Emps'] " >Employees</a>  |
+<a [routerLink]=" ['/User-Component'] " >Customers</a>  |
+</div>
+<hr/>
+
+<router-outlet></router-outlet>
+
+<a [routerLink]="['/']">Back to Home</a>

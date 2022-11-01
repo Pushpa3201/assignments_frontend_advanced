@@ -1,0 +1,74 @@
+<input type="button" value="Get Data" (click)="bt1()" /><br><br>
+<!--<h3>Customers data from server</h3>
+<table border="2">
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Country</th>
+    </tr>
+    <tr *ngFor="let item of usersArray">
+        <td>{{item.Name}}</td>
+        <td>{{item.City}}</td>
+        <td>{{item.Country}}</td>
+    </tr>
+</table>
+
+<br><br><br>-->
+<h3>Using Json Server</h3>
+
+<table border="2">
+    <tr>
+        <th>Emp Id</th>
+        <th>Emp Name</th>
+        <th>Job</th>
+        <th>Dept No</th>
+    </tr>
+    <tr *ngFor="let item of empsArray">
+        <td>{{item.empno}}</td>
+        <td>{{item.ename}}</td>
+        <td>{{item.job}}</td>
+        <td>{{item.deptno}}</td>
+        <td> <a  href="javascript:void(0);" [routerLink]="['/Details', item.empno]">View Details</a>
+    </tr>
+</table>
+<br><br>
+<!--<h3>Perform CRUD operations with JSON Server in Angular</h3>
+<hr/>
+<input type="text"  [(ngModel)]="studentId"  placeholder="Student Id"  />
+<input type="text"  [(ngModel)]="name"  placeholder="Student Name"  />
+<input type="text"  [(ngModel)]="city"  placeholder="City Name"  />
+<input type="text"  [(ngModel)]="email"  placeholder="E-mail Id"  />
+<input type="text"  [(ngModel)]="age"  placeholder="Age"  />
+<br/><br/>
+<input type="button" value="Get Students" (click)="getData_click()"  />
+<input type="button" value="Add Student" (click)="addData_click()"  />
+<input type="button"  value="Update Student" (click)="updateData_click(studentId)"  />
+<input type="button"  value="Clear Fields"   (click)="clearFields()" />
+<br><br>
+
+<table border="2"   cellspacing="0">
+	<tr>
+	  <th>Student Id</th>
+	  <th>Student Name</th>
+	  <th>City Name</th>
+	  <th>Student Email</th>
+	  <th>Student Age</th>    
+	</tr>
+
+	<tr *ngFor="let item of studentsArray">
+	  <td>{{item.studentId}}</td>
+	  <td>{{item.name | uppercase}}</td>
+	  <td>{{item.city}}</td>
+	  <td>{{item.email}}</td>
+	  <td>{{item.age}}</td> 
+    <td> <a  href="javascript:void(0);" [routerLink]="['/Details', item.empno]">View Details</a></td>   
+	  <td align="center">
+		<a href="javascript:void(0);" (click)="selectData_click(item.studentId)">Select</a> |
+		<a href="javascript:void(0);" (click)="deleteData_click(item.studentId)">Delete</a>
+	  </td>
+	</tr>
+  </table>-->
+
+
+
+
