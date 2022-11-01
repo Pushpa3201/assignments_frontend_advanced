@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<h3>Data Binding in Angular</h3>
+<hr/>
+<div>
+
+Id : <input  [(ngModel)]="id"   />  
+<br/><br/>
+Name : <input  [(ngModel)]="name"   />  
+<br/><br/>
+Price : <input  [(ngModel)]="price"   />  
+<br/><br/>
+Category : <input  [(ngModel)]="cat"   />  
+<br/><br/>
+Qunatity : <input  [(ngModel)]="qty"   />  
+<br/><br/>
+
+<input type="button" value="Get Product" (click)="getProduct()" /> 
+<input type="button" value="Add Product" (click)="addProduct()" /> 
+<input type="button" value="Update Product" (click)="updateProduct(id)" /> 
+<input type="reset" value="Reset" (click)="reset()"/> <br><br>
+
+<input type="button" value="Load More>>" (click)="nextItems()" [disabled]="isButtonDisable"/> <br><br>
+
+<div *ngFor="let item of productsArray | slice:start:end " class="div1">
+    <p>Product Id : {{item.id  }}</p>
+    <p>Name : {{item.name }}</p>
+    <p>Price : {{item.price }}</p>
+    <p>Category : {{item.cat }}</p>
+    <p>Qunatity : {{item.qty }}</p>
+    <i class="bi bi-pencil-square" (click)="selectPro( item.id)"></i>   |
+    <i class="bi bi-trash" (click)="deletePro( item.id )"></i>
+</div>
+
+
+</div>
