@@ -1,0 +1,27 @@
+.left{
+    float: left;
+}
+.staffimg{
+    width: 250px;
+    height: 350px;
+}
+h3{
+    margin: 8px;
+    padding:10px;
+    color: rgb(85,6,6);
+    background-color: wheat;
+    text-align: center;
+}
+.staff{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height: 300px;
+    align-items: center;
+  }
+  .m30{
+    padding: 30px 0px 0px 150px;
+    font-size: 18px;
+  }

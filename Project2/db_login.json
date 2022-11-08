@@ -1,0 +1,24 @@
+{
+  "login": [
+    {
+      "username": "Pushpa",
+      "pwd": "12345678",
+      "email": "p@gamil.com"
+    },
+    {
+      "username": "Sravanthi",
+      "pwd": "12345678",
+      "email": "s@gmail.com"
+    },
+    {
+      "username": "Bhargav",
+      "pwd": "12345678",
+      "email": "b@gmail.com"
+    },
+    {
+      "username": "Akhilesh",
+      "pwd": "12345678",
+      "email": "a@gmail.com"
+    }
+  ]
+}
